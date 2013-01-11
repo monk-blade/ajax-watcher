@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+AJAX WATCHER
+</title>
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <center><img src="lg.png" /></center>
+</head>
+<body>
+
+    <ul class="nav nav-tabs" id="myTab">
+    <li><a href="#news" data-toggle="tab">News Watcher</a></li>
+    <li><a href="#currency" data-toggle="tab">Currency Watcher</a></li>
+    <li><a href="#stock" data-toggle="tab">Stock Market Watcher</a></li>
+    <li><a href="#weather" data-toggle="tab">Weather Watcher</a></li>
+    <li><a href="#movie" data-toggle="tab">Movie Watcher</a></li>
+    <li><a href="#time" data-toggle="tab">Time Watcher</a></li>
+    <li><a href="#geo" data-toggle="tab">Geo Watcher</a></li>
+    <li><a href="#dev" data-toggle="tab">Developer's Talk</a></li>
+    </ul>
+    
+    <div class="tab-content">
+<div class="tab-pane active" id="news" style="margin: 0 auto; width:100%; height:100%;">
+<object type="text/html" data="nr.html" style="width:100%; height:500px; "></object>
+</div>
+<div class="tab-pane" id="currency" style="margin: 0 auto; width:100%; height:100%;">
+<object type="text/html" data="cc.html" style="width:100%; height:500px; "></object>
+</div>
+<div class="tab-pane" id="stock" style="margin: 0 auto; width:100%; height:100%;">
+<object type="text/html" data="se.html" style="width:100%; height:500px; "></object>
+</div>
+<div class="tab-pane" id="weather" style="margin: 0 auto; width:100%; height:100%;">
+<object type="text/html" data="we.html" style="width:100%; height:500px; "></object>
+</div>
+<div class="tab-pane" id="movie" style="margin: 0 auto; width:100%; height:100%;">
+<object type="text/html" data="me.html" style="width:100%; height:500px; "></object>
+</div>
+<div class="tab-pane" id="time" style="margin: 0 auto; width:100%; height:100%;">
+<object type="text/html" data="tw.html" style="width:100%; height:500px; "></object>
+</div>
+<div class="tab-pane" id="geo" style="margin: 0 auto; width:100%; height:100%;">
+<object type="text/html" data="gw.html" style="width:100%; height:500px; "></object>
+</div>
+<div class="tab-pane" id="dev" style="margin: 0 auto; width:100%; height:100%;">
+<object type="text/html" data="dev.html" style="width:100%; height:500px; "></object>
+</div>
+</div>
+<script>
+$(function () {
+$('#myTab a:last').tab('show');
+})
+</script>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+
+
+    <script src="assets/js/bootstrap-tab.js"></script>
+   
+    <script src="assets/js/application.js"></script>
+<footer>
+  <center><font size="1px">&copy 2012 <a href="http://codejar-lab.in">Codejar Software Lab</a></font></center>
+</footer>
+</body>
+
+</html>

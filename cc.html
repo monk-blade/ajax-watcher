@@ -1,0 +1,57 @@
+<html>
+<head>
+<style type="text/css">
+body {font-family: sans-serif}
+</style>
+<script type="text/javascript">
+
+function showcc()
+{
+var v1 = document.getElementById("v11").value;
+var cc1 = document.getElementById("cc11").value;
+var cc2 = document.getElementById("cc22").value;
+if (v1.length==0)
+  {
+  document.getElementById("exop").innerHTML="";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("ccop").innerHTML=xmlhttp.responseText;
+    }
+  }
+ var url= "getcc.php?val=" + v1 + "&cur1=" + cc1 + "&cur2=" + cc2; 
+xmlhttp.open("GET",url,true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+<form align="center">
+Enter value: <input type="text" id="v11">
+<select id="cc11">
+<option value="">Input currency</option>
+<option value="USD">USD</option>
+<option value="INR">INR</option>
+</select>
+<select id="cc22">
+<option value="">Output currency</option>
+<option value="USD">USD</option>
+<option value="INR">INR</option>
+</select>
+<input type="button" value="Convert it" onclick="showcc();"/>
+</form>
+<br />
+<div id="ccop" align="center">Currency value will be displayed here...</div>
+</body>
+</html> 
